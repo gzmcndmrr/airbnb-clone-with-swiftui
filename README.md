@@ -2,10 +2,12 @@
 
 A modern Airbnb-inspired rental app built entirely with SwiftUI.  
 Includes interactive listings, maps, detail views, and a clean user interface.
-<img width="375" height="852" alt="Screenshot 2025-07-23 at 4 39 53 PM" src="https://github.com/user-attachments/assets/03c3a7fd-f4a7-4be6-8e2e-63c2a91ab09d" />
-<img width="375" height="852" alt="Screenshot 2025-07-23 at 5 14 11 PM" src="https://github.com/user-attachments/assets/e6778409-2d7c-407f-9cbb-8001e9d640da" />
-<img width="375" height="852" alt="Screenshot 2025-07-23 at 5 14 05 PM" src="https://github.com/user-attachments/assets/39f5a78a-5f92-4ef6-bef3-55366c54725f" />
-<img width="375" height="852" alt="Screenshot 2025-07-23 at 5 13 53 PM" src="https://github.com/user-attachments/assets/bbeeb7b1-ae9f-417e-8612-c4908e43ff1f" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/03c3a7fd-f4a7-4be6-8e2e-63c2a91ab09d" width="22%" />
+  <img src="https://github.com/user-attachments/assets/e6778409-2d7c-407f-9cbb-8001e9d640da" width="22%" />
+  <img src="https://github.com/user-attachments/assets/39f5a78a-5f92-4ef6-bef3-55366c54725f" width="22%" />
+  <img src="https://github.com/user-attachments/assets/bbeeb7b1-ae9f-417e-8612-c4908e43ff1f" width="22%" />
+</p>
 
 
 ## ✨ Features
