@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    init() {
+        UINavigationBar.setTransparentAppearance()
+     }
+
     var body: some View {
        MainTabView()
     }

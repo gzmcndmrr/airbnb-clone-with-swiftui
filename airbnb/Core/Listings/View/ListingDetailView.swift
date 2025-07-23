@@ -10,12 +10,14 @@ import MapKit
 
 struct ListingDetailView: View {
     
-    @Environment(\.dismiss) var dismiss
     let listing: Listing
     @State private var cameraPosition:  MapCameraPosition
+    @Binding var path: NavigationPath
     
-    init(listing: Listing){
+    init(listing: Listing, path: Binding<NavigationPath>){
         self.listing = listing
+        self._path = path
+        
         let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: listing.latitude, longitude: listing.longitude),
                                         span:  MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
         
@@ -29,7 +31,7 @@ struct ListingDetailView: View {
                      .frame(height:400)
                 
                 Button{
-                    dismiss()
+                    path.removeLast()
                 }label: {
                     Image(systemName: "chevron.left")
                         .foregroundStyle(.black)
@@ -239,5 +241,5 @@ struct ListingDetailView: View {
 }
 
 #Preview {
-    ListingDetailView(listing: DeveloperPreview.shared.listings[0])
+    ListingDetailView(listing: DeveloperPreview.shared.listings[0],path: .constant(NavigationPath()))
 }

@@ -10,12 +10,14 @@ import SwiftUI
 struct ExploreView : View {
     @State private var showDestinationSearchView = false
     @StateObject var viewModel = ExploreViewModel(service: ExploreService())
+    @State private var path = NavigationPath()
+
     
     var body: some View {
         if showDestinationSearchView{
             DestinationSearchView(show: $showDestinationSearchView, viewModel: viewModel)
         } else {
-            NavigationStack{
+            NavigationStack(path: $path) {
                 VStack{
                     SearchAndFilterBar(location: $viewModel.searchLocation)
                         .onTapGesture {
@@ -32,6 +34,7 @@ struct ExploreView : View {
                                 NavigationLink(value: listing){
                                     ListingItemView(listing: listing)
                                         .frame(height:400).clipShape(RoundedRectangle(cornerRadius:10) )}
+                                
                                 }
                                 
                         }
@@ -39,9 +42,9 @@ struct ExploreView : View {
                     .navigationDestination(for: Listing.self){
                         listing in
                         
-                        ListingDetailView(listing: listing)
+                        ListingDetailView(listing: listing, path: $path)
                             .navigationBarHidden(true)
-                            .navigationBarBackButtonHidden()
+                            .navigationBarBackButtonHidden(true)
                         
                         
                     }
