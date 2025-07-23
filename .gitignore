@@ -1,0 +1,35 @@
+# Xcode build
+build/
+DerivedData/
+
+# User data
+*.xcuserstate
+*.xcscmblueprint
+*.xcworkspace
+xcuserdata/
+
+# SwiftPM
+/.build/
+Package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/screenshots/
+fastlane/Preview.html
+
+# Secrets
+GoogleService-Info.plist
+*.env
+
+# macOS
+.DS_Store
+
+# Xcode Previews
+*.preview-thumbnails
